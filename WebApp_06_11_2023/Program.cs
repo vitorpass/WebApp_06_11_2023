@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using WebApp_06_11_2023.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DBContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DBContext") ?? throw new InvalidOperationException("Connection string 'DBContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MnhaConexao") ?? throw new InvalidOperationException("Connection string 'DBContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
